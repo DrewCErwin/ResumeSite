@@ -4,7 +4,7 @@ var Blog = "Blog";
 
 
 function UpdateClick(obj) {
-    const url = "https://resumeupdatehttp.azurewebsites.net/api/HttpTrigger1/";
+    const url = "**********************";
     const bodyinfo = JSON.stringify({"name": obj});
     const options = {
       method: "POST",
