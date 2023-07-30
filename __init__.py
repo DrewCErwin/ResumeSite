@@ -29,8 +29,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             "RowKey" : name,
         }
 
-        table_service_client = TableServiceClient.from_connection_string(conn_str="DefaultEndpointsProtocol=https;AccountName=resumesitetable;AccountKey=DQbvS4yQr2HWEeL3idjoOXjkkCjEwPT9eUn3ZhFcvOzPfsQ9LKk5OonZbe28CbjFskL5qhVZZ2AyACDbpFrVXw==;TableEndpoint=https://resumesitetable.table.cosmos.azure.com:443/;")
-        table_client = table_service_client.get_table_client(table_name="ResumeSiteCounter")
+        table_service_client = TableServiceClient.from_connection_string(conn_str="*************************************")
+        table_client = table_service_client.get_table_client(table_name="***************")
 
         created = table_client.get_entity(partition_key=my_entity["PartitionKey"], row_key=my_entity["RowKey"])
         if created["Clicks"]:
